@@ -28,4 +28,20 @@ class ShapeTest {
         assertEquals(0.5 * 3 * 4, triangle.area(), EPSILON);
         assertEquals(3 + 4 + 5, triangle.perimeter(), EPSILON);
     }
+
+    @Test
+    void testShapesList() {
+        List<Shape> shapes = new ArrayList<>();
+        shapes.add(new Circle("Circle", 3.5));
+        shapes.add(new Circle("Circle", 5));
+        shapes.add(new Rhombus("Rhombus", 8, 6, 5));
+        shapes.add(new Rhombus("Rhombus", 10, 8, 6));
+        shapes.add(new RightAngledTriangle("Triangle", 3, 4));
+        shapes.add(new RightAngledTriangle("Triangle", 5, 12));
+
+        for (Shape shape : shapes) {
+            assertTrue(shape.area() > 0);
+            assertTrue(shape.perimeter() > 0);
+        }
+    }
 }
