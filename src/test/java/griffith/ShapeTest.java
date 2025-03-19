@@ -14,4 +14,11 @@ class ShapeTest {
         assertEquals(Math.PI * 3.5 * 3.5, circle.area(), EPSILON);
         assertEquals(2 * Math.PI * 3.5, circle.perimeter(), EPSILON);
     }
+
+    @Test
+    void testRhombus() {
+        Rhombus rhombus = new Rhombus("Rhombus", 8, 6, 5);
+        assertEquals((8 * 6) / 2, rhombus.area(), EPSILON);
+        assertEquals(4 * 5, rhombus.perimeter(), EPSILON);
+    }
 }
