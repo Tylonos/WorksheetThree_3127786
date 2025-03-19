@@ -21,4 +21,11 @@ class ShapeTest {
         assertEquals((8 * 6) / 2, rhombus.area(), EPSILON);
         assertEquals(4 * 5, rhombus.perimeter(), EPSILON);
     }
+
+    @Test
+    void testRightAngledTriangle() {
+        RightAngledTriangle triangle = new RightAngledTriangle("Right-Angled Triangle", 3, 4);
+        assertEquals(0.5 * 3 * 4, triangle.area(), EPSILON);
+        assertEquals(3 + 4 + 5, triangle.perimeter(), EPSILON);
+    }
 }
